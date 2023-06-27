@@ -2,6 +2,7 @@ import argparse
 import json
 import re
 import spacy
+from tqdm import tqdm
 
 nlp = spacy.load('en_core_web_sm')
 
@@ -88,6 +89,7 @@ def main(args):
 
     data = json.load(open(args.input_file))
     print(f"Total data instances to preprocess: {str(len(data))}")
+    progress_bar = tqdm(total=len(data))
 
     for i in data:
         if args.input_type == 'articles':
@@ -98,17 +100,27 @@ def main(args):
                 data[i]['masked_text'] = mask_citations(data[i]['citation_context'], dataset=args.dataset)
             data[i]['preprocessed'] = tokenize_and_index(data[i]['masked_text'], word2index, vocabulary)
             data[i]['tc_index'] = data[i]['preprocessed'].index(word2index['targetcit'])
-    
-    json.dump(data, open(args.input_file, 'wt'))
+        progress_bar.update()
+    json.dump(data, open('arti_single' + args.input_file, 'wt'))
+    progress_bar.close()
+
 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('input_file', help='JSON file with ids as keys and dictionary of fields as values')
-    parser.add_argument('embeddings_file', help='txt file with embeddings for tokens, used for determining vocabulary')
+    parser.add_argument('--input_file', default=None, help='JSON file with ids as keys and dictionary of fields as values')
+    parser.add_argument('--embeddings_file', default=None, help='txt file with embeddings for tokens, used for determining vocabulary')
     parser.add_argument('-input_type', default='articles', type=str, help='what type of text is in the input: [articles, contexts]')
     parser.add_argument('--mask_contexts', default=False, action='store_true', help='whether to include the step of masking the texts in the context')
     parser.add_argument('--dataset', default='other', type=str, help='type of dataset (needed if masking contexts): [acl, refseer, other]')
     args = parser.parse_args()
 
+    if args.input_file == None:
+        args.input_file = 'arxiv/papers.json'
+    
+    if args.embeddings_file == None:
+        args.embeddings_file = 'resources/ai2_embeddings.txt'
+
+
     main(args)
+

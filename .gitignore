@@ -127,3 +127,20 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+arxiv/val_data.json
+arxiv/contexts.json
+arxiv/test_data.json
+arxiv/contexts_new.json
+arxiv/papers.json
+arxiv/train_data.json
+test.txt
+dataVisualize.ipynb
+experiments/prediction_acl/acl_model-21-04-2023-19-31-22_test.json
+experiments/model_acl/acl_model-21-04-2023-19-31-22.pth
+resources/test.json
+resources/contexts_200.json
+resources/contexts_600.json
+resources/ai2_embeddings.txt
+resources/papers.json
+resources/acl.zip
+.idea/

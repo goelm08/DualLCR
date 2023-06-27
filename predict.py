@@ -13,7 +13,7 @@ def main(args):
     config = Config(args.config_file)
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
     pin_memory = device == 'cuda'
-
+    print(device)
     model = CitRecFunModel(
         embeddings_path=config.embeddings_path,
         rnn_num_layers=config.rnn_num_layers,
@@ -67,12 +67,14 @@ def main(args):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('config_file', help='JSON file with config parameters')
-    parser.add_argument('model_name', help='name under which model will be stored')
-    parser.add_argument('-dual', default=False, action='store_true', help='True if dual scoring is used, False otherwise')
-    parser.add_argument('-global_info', default=False, action='store_true', help='True if global information is used for context representation, False otherwise')
-    parser.add_argument('-weighted_sum', default=False, action='store_true', help='True if sum of scores is weighted, False otherwise')
-    parser.add_argument('input_file', nargs='+', help='files to predict')
+    parser.add_argument('-config_file',type=str, default='experiments/config_acl.json', help='JSON file with config parameters')
+    parser.add_argument('-model_name', default='model_acl',action='store_true' ,help='name under which model will be stored')
+    parser.add_argument('-dual', default=True, action='store_true', help='True if dual scoring is used, False otherwise')
+    parser.add_argument('-global_info', default=True, action='store_true', help='True if global information is used for context representation, False otherwise')
+    parser.add_argument('-weighted_sum', default=True, action='store_true', help='True if sum of scores is weighted, False otherwise')
+    parser.add_argument('-input_file',default=['resources/test.json'], action='store_true', help='files to predict')
+    parser.add_argument('-model_path',default='experiments/model_acl/acl_model-21-04-2023-19-31-22.pth', action='store_true', help='path to the model')
+    # argv = ['experiments/config_acl.json', 'model_acl', '-dual', '-global_info', '-weighted_sum', 'resources/test.json', 'experiments/model_acl/acl_model-21-04-2023-19-31-22.pth']
     args = parser.parse_args()
-
+    print(args)
     main(args)

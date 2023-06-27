@@ -1,18 +1,101 @@
 {
-    "A00-1004": {
-        "title": "Automatic construction of parallel English-Chinese corpus for\ncross-language information retrieval",
-        "abstract": "A major obstacle to the construction of a probabilistic translation model is the lack of large parallel corpora. In this paper we first describe a parallel text mining system that finds parallel texts automatically on the Web. The generated Chinese-English parallel corpus is used to train a probabilistic translation model which translates queries for Chinese-English cross-language information retrieval (CLIR). We will discuss some problems in translation model training and show the preliminary CUR results."
-    },
-    "A00-1007": {
-        "title": "Distilling dialogues - A method using natural dialogue corpora for\ndialogue systems development",
-        "abstract": "We report on a method for utilising corpora collected in natural settings. It is based on distilling (re-writing) natural dialogues to elicit the type of dialogue that would occur if one the dialogue participants was a computer instead of a human. The method is a complement to other means such as Wizard of Oz-studies and un-distilled natural dialogues. We present the distilling method and guidelines for distillation. We also illustrate how the method affects a corpus of dialogues and discuss the pros and cons of three approaches in different phases of dialogue systems development."
-    },
-    "P91-1022": {
-        "title": "ALIGNING SENTENCES IN PARALLEL CORPORA",
-        "abstract": "In this paper we describe a statistical technique for aligning sentences with their translations in two parallel corpora. In addition to certain anchor points that are available in our data, the only information about the sentences that we use for calculating alignments is the number of tokens that they contain. Because we make no use of the lexical details of the sentence, the alignment computation is fast and therefore practical for application to very large collections of text. We have used this technique to align several million sentences in the English-French Hansard corpora and have achieved an accuracy in excess of 99% in a random selected set of 1000 sentence pairs that we checked by hand. We show that even without the benefit of anchor points the correlation between the lengths of aligned sentences is strong enough that we should expect to achieve an accuracy of between 96% and 97%. Thus, the technique may be applicable to a wider variety of texts than we have yet tried."
-    },
-    "P97-1035": {
-        "title": "PARADISE: A Framework for Evaluating Spoken Dialogue Agents",
-        "abstract": "This paper presents PARADISE (PARAdigm for DIalogue System Evaluation), a general framework for evaluating spoken rlialogue agents. The framework decouples task requirements from an agent's dialogue behaviors, supports comparisons among dialogue strategies, enables the calculation of performance over subdialogues and whole dialogues, specifies the relative contribution of various factors to performance, and makes it possible to compare agents performing different tasks by normalizing for task complexity."
-    }
+  "A00-1004": {
+    "title": "Automatic construction of parallel English-Chinese corpus for\ncross-language information retrieval",
+    "abstract": "A major obstacle to the construction of a probabilistic translation model is the lack of large parallel corpora. In this paper we first describe a parallel text mining system that finds parallel texts automatically on the Web. The generated Chinese-English parallel corpus is used to train a probabilistic translation model which translates queries for Chinese-English cross-language information retrieval (CLIR). We will discuss some problems in translation model training and show the preliminary CUR results.",
+    "preprocessed_abstract": [
+      [
+        8, 301, 8497, 7, 0, 1977, 2, 8, 4122, 2204, 74, 13, 0, 1035, 2, 194,
+        1090, 9535, 1
+      ],
+      [
+        5, 20, 130, 24, 121, 685, 8, 1090, 1875, 2797, 72, 15, 9020, 1090, 8264,
+        3390, 18, 0, 1064, 1
+      ],
+      [
+        0, 961, 1681, 6, 3108, 1090, 4007, 13, 58, 7, 6172, 8, 4122, 2204, 74,
+        35, 16453, 4422, 12, 1681, 6, 3108, 575, 6, 968, 153, 2392, 10, 64935,
+        9, 1
+      ],
+      [24, 206, 1222, 148, 422, 5, 2204, 74, 639, 4, 174, 0, 1691, 28945, 34, 1]
+    ],
+    "preprocessed_title": [
+      2116, 1977, 2, 1090, 3108, 6, 1681, 4007, 12, 504339, 575, 6, 968, 153,
+      2392
+    ]
+  },
+  "A00-1007": {
+    "title": "Distilling dialogues - A method using natural dialogue corpora for\ndialogue systems development",
+    "abstract": "We report on a method for utilising corpora collected in natural settings. It is based on distilling (re-writing) natural dialogues to elicit the type of dialogue that would occur if one the dialogue participants was a computer instead of a human. The method is a complement to other means such as Wizard of Oz-studies and un-distilled natural dialogues. We present the distilling method and guidelines for distillation. We also illustrate how the method affects a corpus of dialogues and discuss the pros and cons of three approaches in different phases of dialogue systems development.",
+    "preprocessed_abstract": [
+      [24, 260, 18, 8, 107, 12, 18878, 9535, 758, 5, 668, 2247, 1],
+      [
+        40, 13, 55, 18, 87783, 10, 1481, 6, 5391, 9, 668, 24857, 7, 6293, 0,
+        127, 2, 8349, 15, 492, 1050, 283, 69, 0, 8349, 607, 14, 8, 885, 2138, 2,
+        8, 94, 1
+      ],
+      [
+        0, 107, 13, 8, 2569, 7, 76, 766, 92, 19, 45727, 2, 28809, 6, 95, 4,
+        3576, 6, 12287, 668, 24857, 1
+      ],
+      [24, 123, 0, 87783, 107, 4, 1483, 12, 19724, 1],
+      [
+        24, 56, 2937, 296, 0, 107, 2168, 8, 4007, 2, 24857, 4, 1222, 0, 15835,
+        4, 15824, 2, 118, 707, 5, 84, 2245, 2, 8349, 164, 136, 1
+      ]
+    ],
+    "preprocessed_title": [
+      87783, 24857, 6, 8, 107, 42, 668, 8349, 9535, 12, 504339, 8349, 164, 136
+    ]
+  },
+  "P91-1022": {
+    "title": "ALIGNING SENTENCES IN PARALLEL CORPORA",
+    "abstract": "In this paper we describe a statistical technique for aligning sentences with their translations in two parallel corpora. In addition to certain anchor points that are available in our data, the only information about the sentences that we use for calculating alignments is the number of tokens that they contain. Because we make no use of the lexical details of the sentence, the alignment computation is fast and therefore practical for application to very large collections of text. We have used this technique to align several million sentences in the English-French Hansard corpora and have achieved an accuracy in excess of 99% in a random selected set of 1000 sentence pairs that we checked by hand. We show that even without the benefit of anchor points the correlation between the lengths of aligned sentences is strong enough that we should expect to achieve an accuracy of between 96% and 97%. Thus, the technique may be applicable to a wider variety of texts than we have yet tried.",
+    "preprocessed_abstract": [
+      [
+        5, 20, 130, 24, 685, 8, 948, 344, 12, 19667, 7584, 11, 54, 14805, 5, 48,
+        1090, 9535, 1
+      ],
+      [
+        5, 265, 7, 973, 9786, 1004, 15, 22, 423, 5, 82, 51, 3, 0, 111, 153, 188,
+        0, 7584, 15, 24, 85, 12, 6481, 13281, 13, 0, 146, 2, 22230, 15, 160,
+        1844, 1
+      ],
+      [
+        308, 24, 994, 73, 85, 2, 0, 7257, 3010, 2, 0, 6981, 3, 0, 3529, 2556,
+        13, 1154, 4, 418, 1520, 12, 374, 7, 326, 194, 6328, 2, 1875, 1
+      ],
+      [
+        24, 36, 58, 20, 344, 7, 14927, 225, 2849, 7584, 5, 0, 3108, 6, 4659,
+        398037, 9535, 4, 36, 846, 23, 765, 5, 2562, 2, 6805, 665, 5, 8, 1156,
+        734, 414, 2, 3488, 6981, 2038, 15, 24, 8625, 16, 910, 1
+      ],
+      [
+        24, 174, 15, 460, 185, 0, 1341, 2, 9786, 1004, 0, 501, 38, 0, 4852, 2,
+        6962, 7584, 13, 849, 2966, 15, 24, 242, 7311, 7, 1314, 23, 765, 2, 38,
+        4957, 665, 4, 7357, 665, 1
+      ],
+      [
+        312, 3, 0, 344, 62, 26, 3486, 7, 8, 5587, 1024, 2, 8264, 47, 24, 36,
+        1112, 7881, 1
+      ]
+    ],
+    "preprocessed_title": [19667, 7584, 5, 1090, 9535]
+  },
+  "P97-1035": {
+    "title": "PARADISE: A Framework for Evaluating Spoken Dialogue Agents",
+    "abstract": "This paper presents PARADISE (PARAdigm for DIalogue System Evaluation), a general framework for evaluating spoken rlialogue agents. The framework decouples task requirements from an agent's dialogue behaviors, supports comparisons among dialogue strategies, enables the calculation of performance over subdialogues and whole dialogues, specifies the relative contribution of various factors to performance, and makes it possible to compare agents performing different tasks by normalizing for task complexity.",
+    "preprocessed_abstract": [
+      [
+        20, 130, 1104, 64112, 10, 2893, 12, 8349, 72, 331, 9, 3, 8, 355, 749,
+        12, 2124, 9369, 504339, 635, 1
+      ],
+      [
+        0, 749, 49459, 814, 1299, 21, 23, 918, 89, 8349, 1873, 3, 2513, 2705,
+        154, 8349, 727, 3, 2676, 0, 3162, 2, 183, 159, 369168, 4, 897, 24857, 3,
+        16478, 0, 534, 1476, 2, 276, 158, 7, 183, 3, 4, 1964, 40, 302, 7, 1040,
+        635, 2903, 84, 1526, 16, 21383, 12, 814, 1321, 1
+      ]
+    ],
+    "preprocessed_title": [64112, 29, 8, 749, 12, 2124, 9369, 8349, 635]
+  }
 }

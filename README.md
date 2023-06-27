@@ -50,6 +50,7 @@ To generate predictions on test files with 'DualEnh-ws' variant of the model, ru
 ```eval
 python predict.py <path_to_config_json> <path_to_saved_model> -dual -global_info -weighted_sum <path_to_input_file>
 ```
+python predict.py experiments/config_acl.json experiments/model_acl/acl_model-21-04-2023-19-31-22.pth -dual -global_info -weighted_sum resources/test.json
 
 
 ## Citation
